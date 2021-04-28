@@ -26,7 +26,7 @@ function verifyLastClient(name, mail, phone) {
     .and("contain", phone)
 }
 
-function editLastClient(name, mail, number, content1/*, content2*/) {
+function editLastClient(name, mail, number, content) {
   //  cy.get(CLIENT_LIST).last()
    // .should("contain", name)
   //  .and("contain", mail)
@@ -42,7 +42,7 @@ function editLastClient(name, mail, number, content1/*, content2*/) {
     cy.get(EDIT_EMAIL_FIELD).type(mail)
     cy.get(EDIT_PHONE_FIELD).type(number)
     cy.get(SAVE_BTN).click()
-    cy.get(HEADER).should("contain", content1) //Client: 2
+    cy.get(HEADER).should("contain", content) //Client: 2
    // cy.contains(content2)
 
 }
