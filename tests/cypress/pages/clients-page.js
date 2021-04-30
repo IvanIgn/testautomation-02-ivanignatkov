@@ -58,6 +58,6 @@ function deleteLastClient() {
 exports.default = {
     viewNewClient,
     verifyLastClient,
-    deleteLastClient,
-    editLastClient
+    editLastClient,
+    deleteLastClient
 }

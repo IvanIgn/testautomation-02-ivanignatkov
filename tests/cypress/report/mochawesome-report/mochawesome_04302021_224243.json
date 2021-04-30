@@ -1,0 +1,220 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-30T20:41:51.799Z",
+    "end": "2021-04-30T20:42:43.789Z",
+    "duration": 51990,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "587a1ca6-1be3-46ce-8660-b8e65e83a870",
+      "title": "",
+      "fullFile": "cypress/integration/page-objects.spec.js",
+      "file": "cypress/integration/page-objects.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new client",
+              "fullTitle": "Testsuite Create a new client",
+              "timedOut": null,
+              "duration": 8844,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewClients(\"Clients\");\ncy.wait(500);\ncy.percySnapshot(\"Clients page\");\nclientsPage.viewNewClient(\"New Client\");\ncy.wait(500);\ncy.percySnapshot(\"New Client Page\");\nnewClientPage.createNewClient(randomName, randomMail, randomPhone, \"Clients\");\nclientsPage.verifyLastClient(randomName, randomMail, randomPhone);\ncy.wait(500);\ncy.percySnapshot(\"New Client is created and verified\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "e0c4e43a-a0ad-4899-b67a-9dc4c0b73cd8",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit last client",
+              "fullTitle": "Testsuite Edit last client",
+              "timedOut": null,
+              "duration": 7604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewClients(\"Clients\");\ncy.wait(500);\ncy.percySnapshot(\"Clients page\");\nclientsPage.editLastClient(randomName2, randomMail2, randomPhone2, \"Clients\");\nclientsPage.verifyLastClient(randomName2, randomMail2, randomPhone2, \"Clients\");\ncy.wait(500);\ncy.percySnapshot(\"Last Client is edited and verified\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "352a6d4c-e663-47e4-87d8-4bebeba5df54",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last client",
+              "fullTitle": "Testsuite Delete last client",
+              "timedOut": null,
+              "duration": 5465,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewClients(\"Clients\");\ncy.wait(500);\ncy.percySnapshot(\"Clients page\"); //clientsPage.viewNewClient(\"New Client\")\nclientsPage.deleteLastClient();\ncy.wait(500);\ncy.percySnapshot(\"Last Client is removed\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "49d673b0-133d-4eb4-a945-4e1f15c83add",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a new room",
+              "fullTitle": "Testsuite Create a new room",
+              "timedOut": null,
+              "duration": 7501,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\ncy.wait(500);\ncy.percySnapshot(\"Rooms page\");\nroomsPage.viewNewRoom(\"New Room\");\ncy.wait(500);\ncy.percySnapshot(\"New Room Page\");\nnewRoomPage.createNewRoom(randomCategory, randomNumber, randomFloor, randomPrice, randomFeature, \"Rooms\");\ncy.wait(500);\nif (randomFeature == \"sea_view\") {\n  randomFeature = \"sea view\";\n}\nroomsPage.verifyLastRoom(randomCategory, randomNumber, randomFloor, randomPrice, randomFeature);\ncy.wait(500);\ncy.percySnapshot(\"New Room is created and verified\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "dc08b162-6e29-4f9e-8c47-ab01eed3df96",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit last room",
+              "fullTitle": "Testsuite Edit last room",
+              "timedOut": null,
+              "duration": 7852,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\ncy.wait(500);\ncy.percySnapshot(\"Rooms page\");\nroomsPage.editLastRoom(randomCategory2, randomNumber2, randomFloor2, randomPrice2, randomFeature2, \"Rooms\");\ncy.wait(500);\nif (randomFeature2 == \"sea_view\") {\n  randomFeature2 = \"sea view\";\n}\nroomsPage.verifyLastRoom(randomCategory2, randomNumber2, randomFloor2, randomPrice2, randomFeature2);\ncy.wait(500);\ncy.percySnapshot(\"Last room is edited and verified\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "6a52c9ec-8baf-4720-9e7a-a5d79b18ca7c",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last room",
+              "fullTitle": "Testsuite Delete last room",
+              "timedOut": null,
+              "duration": 5291,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\ncy.wait(500);\ncy.percySnapshot(\"Rooms page\"); //clientsPage.viewNewClient(\"New Client\")\nroomsPage.deleteLastRoom();\ncy.wait(500);\ncy.percySnapshot(\"Last Room is removed\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "0d409727-1168-4387-b519-770d4827ae42",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logout",
+              "fullTitle": "Testsuite Logout",
+              "timedOut": null,
+              "duration": 4612,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.logoutUser(\"Login\");\ncy.wait(500);\ncy.percySnapshot(\"User logges out and returns to Login page\");\ncy.wait(500);",
+              "err": {},
+              "uuid": "fe1c2b16-31dc-4afd-a798-c343eeeeb3a1",
+              "parentUUID": "2dfe443e-a4a1-4943-8403-a7b168f51893",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e0c4e43a-a0ad-4899-b67a-9dc4c0b73cd8",
+            "352a6d4c-e663-47e4-87d8-4bebeba5df54",
+            "49d673b0-133d-4eb4-a945-4e1f15c83add",
+            "dc08b162-6e29-4f9e-8c47-ab01eed3df96",
+            "6a52c9ec-8baf-4720-9e7a-a5d79b18ca7c",
+            "0d409727-1168-4387-b519-770d4827ae42",
+            "fe1c2b16-31dc-4afd-a798-c343eeeeb3a1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 47169,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

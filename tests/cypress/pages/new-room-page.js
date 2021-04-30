@@ -11,7 +11,7 @@ const SAVE_BTN = ".blue"
 
 //Functions
 
-function createNewRoom(category, number, floor, price, feature) {
+function createNewRoom(category, number, floor, price, feature, content) {
     cy.get(CATEGORY_FIELD).select(category)
     cy.get(NUMBER_FIELD).type(number)
     cy.get(FLOOR_FIELD).type(floor)
@@ -19,7 +19,7 @@ function createNewRoom(category, number, floor, price, feature) {
     cy.get(PRICE_FIELD).type(price)
     cy.get(FEATURES_FIELD).select(feature)
     cy.get(SAVE_BTN).click()
-    //cy.contains(content)
+    cy.contains(content)
 }
 
 //Exports

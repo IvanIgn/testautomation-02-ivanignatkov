@@ -1,12 +1,12 @@
 {
-  "name": "Cypresstest",
+  "name": "cypresstest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec cypress/integration/page-objects.spec.js",
+    "cypress:run": "cypress run --reporter mochawesome",
     "test:vrt": "percy exec cypress run --spec cypress/integration/page-objects.spec.js"
   },
   "keywords": [],

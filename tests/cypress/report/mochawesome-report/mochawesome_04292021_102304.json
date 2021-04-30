@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-29T08:22:39.720Z",
+    "end": "2021-04-29T08:23:04.525Z",
+    "duration": 24805,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6933dcae-c8f1-45c6-ade3-add14b3808e4",
+      "title": "",
+      "fullFile": "cypress/integration/page-objects.spec.js",
+      "file": "cypress/integration/page-objects.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cea0a126-dfe8-462e-ad03-ef09005f3e17",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new room",
+              "fullTitle": "Testsuite Create a new room",
+              "timedOut": null,
+              "duration": 10079,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\nroomsPage.viewNewRoom(\"New Room\");\nnewRoomPage.createNewRoom(randomCategory, randomNumber, randomFloor, randomPrice, randomFeature, \"Rooms\");\ncy.wait(500);\nroomsPage.verifyLastRoom(randomCategory, randomNumber, randomFloor, randomPrice, randomFeature);\ncy.wait(500);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<div.card.room>' to contain 'sea_view'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<div.card.room>' to contain 'sea_view'\n    at Object.verifyLastRoom (http://localhost:3000/__cypress/tests?p=cypress\\integration\\page-objects.spec.js:579:26)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress\\integration\\page-objects.spec.js:301:15)",
+                "diff": null
+              },
+              "uuid": "39fdcefa-f1a2-4885-82c6-ca53f382e699",
+              "parentUUID": "cea0a126-dfe8-462e-ad03-ef09005f3e17",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit last room",
+              "fullTitle": "Testsuite Edit last room",
+              "timedOut": null,
+              "duration": 5659,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// indexPage.viewClients(\"Clients\")\n// clientsPage.viewNewClient(\"New Client\")\nindexPage.viewRooms(\"Rooms\");\nroomsPage.editLastRoom(randomCategory2, randomNumber2, randomFloor2, randomPrice2, randomFeature2, \"Rooms\");\ncy.wait(500);\nroomsPage.verifyLastRoom(randomCategory2, randomNumber2, randomFloor2, randomPrice2, randomFeature2);\ncy.wait(500);",
+              "err": {},
+              "uuid": "79f1976e-6ef1-410e-bbab-784c6ab1b2a7",
+              "parentUUID": "cea0a126-dfe8-462e-ad03-ef09005f3e17",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last room",
+              "fullTitle": "Testsuite Delete last room",
+              "timedOut": null,
+              "duration": 3732,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\"); //clientsPage.viewNewClient(\"New Client\")\nroomsPage.deleteLastRoom();\ncy.wait(500);",
+              "err": {},
+              "uuid": "2a5d15d2-8ce8-47fe-94ec-9888b40719ba",
+              "parentUUID": "cea0a126-dfe8-462e-ad03-ef09005f3e17",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "79f1976e-6ef1-410e-bbab-784c6ab1b2a7",
+            "2a5d15d2-8ce8-47fe-94ec-9888b40719ba"
+          ],
+          "failures": [
+            "39fdcefa-f1a2-4885-82c6-ca53f382e699"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19470,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
